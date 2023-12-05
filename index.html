@@ -3,117 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        header {
-            background-image: url('header-background.jpg'); /* Replace with your image */
-            background-size: cover;
-            color: #ffffff;
-            text-align: center;
-            padding: 50px;
-        }
-
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Calvin Kelvin Products</title>
 </head>
 <body>
 
-    <header>
-        <h1>Your Website Name</h1>
-    </header>
-
+    <!-- Navigation Bar -->
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
 
-    <section>
-        <h2>Section 1</h2>
-        <p>Text description goes here.</p>
-        <button id="toggleSectionButton">Toggle Section 2</button>
+    <!-- Header Section -->
+    <header>
+        <h1>Calvin Kelvin Products</h1>
+        <p>Your go-to destination for quality products.</p>
+    </header>
+
+    <!-- Featured Products Section -->
+    <section id="featured-products">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>ComfortFit T-Shirt</h2>
+            <p>Experience unmatched comfort with our premium cotton T-shirt.</p>
+            <button onclick="addToCart('ComfortFitTShirt')">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Classic Denim Jeans</h2>
+            <p>Stay stylish and comfortable with our classic denim jeans.</p>
+            <button onclick="addToCart('ClassicDenimJeans')">Add to Cart</button>
+        </div>
+
+        <!-- Add more products as needed -->
+
     </section>
 
-    <section id="section2" class="hidden">
-        <h2>Section 2</h2>
-        <video controls>
-            <source src="sample.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Video Section -->
+    <section id="video-section">
+        <h2>Our Story</h2>
+        <div id="video-container"></div>
     </section>
 
-    <section>
-        <h2>Section 3</h2>
-        <input type="text" placeholder="Enter text here">
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
+    <!-- Footer Section -->
     <footer>
-        &copy; 2023 Your Website Name. All rights reserved.
+        <p>&copy; 2023 Calvin Kelvin Products</p>
     </footer>
-
-    <script>
-        document.getElementById('toggleSectionButton').addEventListener('click', function() {
-            var section2 = document.getElementById('section2');
-            section2.classList.toggle('hidden');
-        });
-    </script>
 
 </body>
 </html>
